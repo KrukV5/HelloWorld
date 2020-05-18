@@ -16,8 +16,8 @@ public class Main {
         dom.talk("Hello");
         int n = 5;
         fib(n);
-        fibon(n);
-        fibonacci(n);
+        fib_array(n);
+        fib_list(n);
         fib_rek(n);
     }
 
@@ -34,7 +34,7 @@ public class Main {
         return a + b;
     }
 
-    public static int[] fibon(int n) {
+    public static int[] fib_array(int n) {
         int[] tab = new int[n];
         int a = 0;
         int b = 1;
@@ -47,7 +47,7 @@ public class Main {
         return tab;
     }
 
-    public static List<Integer> fibonacci(int n) {
+    public static List<Integer> fib_list(int n) {
         List<Integer> list = new ArrayList<>();
         int a = 0;
         int b = 1;

@@ -5,19 +5,19 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static Hello.Main.fib;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class FibTest {
     @Test
-    public void test1(){
+    public void SingleTest() {
         int fib = fib(2);
-        assertEquals(1,fib);
-
+        assertEquals(1, fib);
     }
+
     @ParameterizedTest
     @CsvSource(value = {"1:1", "2:1", "3:2"}, delimiter = ':')
-    void toLowerCase_ShouldGenerateTheExpectedLowercaseValue(int input, int expected) {
+    void MultiTest(int input, int expected) {
         int fib = fib(input);
-        assertEquals(expected,fib);
+        assertEquals(expected, fib);
     }
 }

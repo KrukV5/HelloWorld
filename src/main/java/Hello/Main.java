@@ -38,7 +38,8 @@ public class Main {
         int[] tab = new int[n];
         int a = 0;
         int b = 1;
-        for (int i = 0; i < n; i++) {
+        tab[0] = 1;
+        for (int i = 1; i < n; i++) {
             tab[i] = a + b;
             a = b;
             b = tab[i];
@@ -51,7 +52,8 @@ public class Main {
         int a = 0;
         int b = 1;
         int c;
-        for (int i = 0; i < n; i++) {
+        list.add(1);
+        for (int i = 0; i < n - 1; i++) {
             c = a + b;
             list.add(c);
             a = b;
@@ -61,13 +63,14 @@ public class Main {
     }
 
     public static int fib_rek(int n) {
+        n = n - 1;
         int a = 0;
         int b = 1;
         int i = 0;
         return rek(n, a, b, i);
     }
 
-    private static int rek(int n, int a, int b, int i) {
+    public static int rek(int n, int a, int b, int i) {
         if (n > 1) {
             if (i % 2 == 0) {
                 a = a + b;

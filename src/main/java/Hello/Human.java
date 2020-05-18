@@ -5,7 +5,7 @@ public class Human {
     private String defaultTalk;
 
     public Human() {
-        numberOfHumans++;
+    numberOfHumans++;
     }
 
     public Human(String s) {

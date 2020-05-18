@@ -14,17 +14,17 @@ public class Main {
         fib(5);
     }
 
-    private static void fib(int n) {
+    public static int fib(int n) {
         int a = 0;
         int b = 1;
-        for(int i=0;i<n;i++) {
+        for (int i = 0; i < n-1; i++) {
             if (i % 2 == 1) {
                 a = a + b;
-                System.out.println(a);
-            } else {
+            }
+            else {
                 b = a + b;
-                System.out.println(b);
             }
         }
+        return a+b;
     }
 }
